@@ -11,6 +11,53 @@ Vue.js的生命周期函数 beforeCreate、create 、beforeMount 、mounted 、b
     7.beforeDestroy 销毁前
     8.destroy 销毁后 （Dom元素存在，只是不再受vue控制）
     
+   ```
+   var vm=new Vue({
+		el:'#date',
+		data:{
+			data:['a','b','c','d'],
+			judge:false,
+			judgeT:true,
+			uname:'111',
+			url:'http://baidu.com',
+ 
+		},
+		methods:{
+			alertSrt:function(){
+				alert('str');
+			},
+			alertNum:function(){
+				alert('num');
+				this.judgeT=false;
+			},
+			alertUame:function(){
+				alert(this.uname);
+			}
+		},
+		beforeCreate:function(){
+			alert('创建前');
+		},
+		create:function(){
+			alert('创建完成');
+		},
+		beforeMount:function(){
+			alert('载入前');
+		},
+		mounted:function(){
+			alert('载入后');
+		},
+		beforeUpdate:function(){
+			alert('更新前');
+		},
+		update:function(){
+			alert('更新后');
+		}
+ 
+	})
+    
+    ```
+    
+    
     
     二、指令
     1.v-model  接收用户输入的一些数据，直接就可以将这些数据 挂载到data属性里面
