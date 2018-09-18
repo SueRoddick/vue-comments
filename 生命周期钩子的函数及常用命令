@@ -10,15 +10,15 @@ Vue.js的生命周期函数 beforeCreate、create 、beforeMount 、mounted 、b
     6.update 更新状态后
     7.beforeDestroy 销毁前
     8.destroy 销毁后 （Dom元素存在，只是不再受vue控制）
- ```
+```
  var vm=new Vue({
-​		el:'#date',
-​		data:{
-​			data:['a','b','c','d'],
-​			judge:false,
-​			judgeT:true,
-​			uname:'111',
-​			url:'http://baidu.com',
+               el:'#date',
+		data:{
+			data:['a','b','c','d'],
+			judge:false,
+			judgeT:true,
+			uname:'111',
+			url:'http://baidu.com',
 	},
 	methods:{
 		alertSrt:function(){
@@ -52,7 +52,6 @@ Vue.js的生命周期函数 beforeCreate、create 、beforeMount 、mounted 、b
 	}
  
 })
-    
 ```
 
 
